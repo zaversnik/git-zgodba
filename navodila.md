@@ -1,7 +1,6 @@
 # Nadaljnja navodila
 
 1. Sedaj imaš lokalno kopijo repozitorija.
-   Odprite direktorij z repozitorijem v 
 2. Poženite skripto, da boste lahko preigrali zgodbo:
    v ukazno vrstico napišete `./hook-install.sh` in stisnete vnašalko.
 3. Za začetek zapišite odgovor na življenje, vesolje in sploh vse nekam v to datoteko.
