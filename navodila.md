@@ -1,8 +1,8 @@
 # Nadaljnja navodila
 
-1. Sedaj imaš lokalno kopijo repozitorija.
+1. Sedaj imate lokalno kopijo repozitorija.
 2. Poženite skripto, da boste lahko preigrali zgodbo:
-   v ukazno vrstico napišete `./hook-install.sh` in stisnete vnašalko.
+   v ukazno vrstico napišete `./hook-install.sh` in stisnite vnašalko.
 3. Uredite to datoteko (`navodila.md`) tako, da bo v njej nekje
    zapisan odgovor na življenje, vesolje in sploh vse (t.j. `42`).
 5. Z `git status` preverite, da ste res spremenili vsebino datoteke.
