@@ -6,12 +6,18 @@ Za igranje potrebujete uporabniški račun na GitHubu, na svojem računalniku pa
 
 ## 1. Naredite svojo kopijo tega repozitorija
 
-- Zgoraj desno, v isti vrstici, kot je ime repozitorija (`rp-git-zgodba`), poiščite gumbe Pin, Watch, Fork in Star.
+- Zgoraj desno, v isti vrstici, kot je ime repozitorija (`git-zgodba`), poiščite gumbe Pin, Watch, Fork in Star.
 - Na tem koraku boste začasno izgubili pogled na navodila, zato ga preberite do konca.
   Kliknite na gumb Fork in na strani, ki se odpre, spodaj še na gumb Create fork.
   Pristali boste na **svoji** kopiji tega repozitorija, s katero lahko delate naprej - videli boste tudi navodila.
+  
+## 2. Pripravite svoj repozitorij
 
-## 2. Klonirajte repozitorij na svoj računalnik
+Github na kopiranih repozitorijih avtomatsko izklopi robotsko pomoč, ki jo uporabimo v zgodbi.
+Da jo ponovno vklopite, pojdite na zavihek *Actions* zgoraj in stisnite zelen gumb z napisom *I understand my workflows, go ahead and enable them*.
+Nato se vrnite na zavihek *Code* in nadaljujte.
+
+## 3. Klonirajte repozitorij na svoj računalnik
 
 [Odprite ukazno vrstico](TODO) in vanjo napišite (ustrezno popravljen) ukaz:
 
