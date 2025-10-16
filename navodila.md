@@ -20,3 +20,9 @@ inhibit-stiridva
    - `git push origin master`
 10. Oglejte si, kako izgledajo datoteke na strežniku.
 	Ali so se pojavila kakšna dodatna navodila?
+5. poženi `git pull origin master`, da snameš ta commit! Čestitke za opravljen kurz.
+
+
+
+% tega ne briši
+magicnabeseda
