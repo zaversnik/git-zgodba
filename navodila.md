@@ -1,3 +1,5 @@
+inhibit-stiridva
+
 # Nadaljnja navodila
 
 1. Sedaj imate lokalno kopijo repozitorija.
@@ -12,5 +14,9 @@
    za katere git še ne ve. Sedaj napišite `git commit -m "Moj prvi commit"` in
    s tem povejte git-u, naj spremembe shrani v repozitorij.
 8. Glejte ukazno vrstico za nadaljnja navodila.
-
-42
+9. Shranite svoje delo na github z naslednjimi ukazi:
+   - `git add navodila.md zelena.txt rumena.txt`
+   - `git commit -m "Tik pred shranjevanjem na strežnik"`
+   - `git push origin master`
+10. Oglejte si, kako izgledajo datoteke na strežniku.
+	Ali so se pojavila kakšna dodatna navodila?
