@@ -22,11 +22,11 @@ Nato se vrnite na zavihek *Code* in nadaljujte.
 [Odprite ukazno vrstico](TODO) in vanjo napišite (ustrezno popravljen) ukaz:
 
 ```
-git clone git@github.com:〈moje-uporabnisko-ime〉/〈moj-repozitorij〉.git
+git clone git@github.com:〈uporabnisko-ime〉/〈ime-tega-repozitorija〉.git
 ```
 
 Sledite navodilom v datoteki `navodila.md`:
-- v ukazni vrstici se premaknite v repozitorij: `cd 〈moj-repozitorij〉` in
+- v ukazni vrstici se premaknite v repozitorij: `cd 〈ime-tega-repozitorija〉` in
 - izpišite vsebino datoteke z navodili: `cat navodila.md`.
 
 Datoteka `navodila.md` je napisana v jeziku Markdown, za to je koda označena z obrnjenimi apostrofi: `` ` ``.
