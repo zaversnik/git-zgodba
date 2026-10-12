@@ -14,6 +14,8 @@ if grep -q "42" navodila.md; then
             cp navodila.md navodila-old.md
             cp spoilerji/navodila-nova.md navodila.md
         fi
+    else
+        printf "\e[0;34mDatoteke zelena.txt še ne najdem.\n\e[0m"
     fi
 
 else
