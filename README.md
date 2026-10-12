@@ -2,12 +2,14 @@
 
 Dobrodošli! Ta repozitorij vsebuje interaktivno zgodbo, skozi katero boste spoznali osnove Gita.
 
-Za igranje potrebujete uporabniški račun na GitHubu, na svojem računalniku pa nameščen Git in nastavljen ključ SSH (oboje ste uredili v 1. n- Zgoraj desno, v vrstici z imenom repozitorija (`git-zgodba`), poiščite gumb _Fork_.
+Za igranje potrebujete uporabniški račun na GitHubu, na svojem računalniku pa nameščen Git in nastavljen ključ SSH (oboje ste uredili v 1. nalogi na vajah).
+
+## 1. Naredite svojo kopijo tega repozitorija
+
+- Zgoraj desno, v vrstici z imenom repozitorija (`git-zgodba`), poiščite gumb _Fork_.
 - Kliknite ga in na strani, ki se odpre, spodaj še _Create fork_.
   Pristali boste na **svoji** kopiji tega repozitorija, ki ima ista navodila; nadaljujte na njej.
 
-a, s katero lahko delate naprej - videli boste tudi navodila.
-  
 ## 2. Pripravite svoj repozitorij
 
 GitHub na kopiranih repozitorijih avtomatsko izklopi robotsko pomoč, ki jo uporabimo v zgodbi.
