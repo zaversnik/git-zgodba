@@ -12,4 +12,5 @@
    ki jih še niste. Sedaj napišite `git commit -m "Moj prvi vnos"` in
    s tem spremembo zabeležite kot vnos v repozitorij.
 7. Glejte ukazno vrstico za nadaljnja navodila.
+   Spremembe zabeležite v ukazni vrstici, ne z gumbom _Commit_ v VSCode, sicer sporočil zgodbe ne boste videli.
    Če se ob ukazu `git commit` ni izpisalo nič drugega kot običajno, ste izpustili 2. korak: poženite skripto in `git commit` ponovite.
