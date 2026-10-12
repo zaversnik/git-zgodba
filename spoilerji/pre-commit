@@ -1,25 +1,69 @@
 #!/usr/bin/env bash
 
-if grep -q "42" navodila.md; then
-    printf "\e[0;34mOdgovor prisoten! Čestitke, zaslužiš si modro barvo.\nZa zeleno moraš ustvariti novo datoteko z imenom 'zelena.txt' (brez narekovajev), povedati Gitu za spremembo z ukazom 'add' in jo zabeležiti z ukazom 'commit'.\n\e[0m"
+# Zgodba sledi temu, kar bo zabeleženo: preverja indeks (kar je dodano z `git add`),
+# ne datotek na disku. Ob vsakem vnosu izpiše le sporočilo za doseženo stopnjo.
 
-    if ls | grep -q "zelena.txt"; then
-        printf $"\e[0;32mČestitke! Naslednja barva je rumena, zanjo moraš izbrisati vse pojavitve besede TODO iz datoteke rumena.txt, ki se je ravno pojavila.\nNadaljnja navodila dobiš, ko bo pravilna sprememba vnesena v repozitorij.\n\e[0m"
-        if ! ls | grep -q "rumena.txt"; then
-            cp spoilerji/rumena.txt rumena.txt
-        fi
+modra='\e[0;34m'
+zelena='\e[0;32m'
+rumena='\e[0;33m'
+rdeca='\e[0;31m'
+konec='\e[0m'
 
-        if ! grep -q "TODO" rumena.txt; then
-           printf $"\e[0;33mFantastično! Sedaj imaš vse tri barve. Skrajni čas, da svoje delo pošlješ na GitHub; navodila so se ravno pojavila v datoteki.\n\e[0m"
-            cp navodila.md navodila-old.md
-            cp spoilerji/navodila-nova.md navodila.md
-        fi
+# Stopnja zgodbe v zadnjem vnosu ("HEAD:") ali v indeksu (":").
+stopnja() {
+    # Navodila že sama omenjajo `42` (v 3. koraku), zato ta namig pred iskanjem odgovora odstranimo.
+    if ! git show "${1}navodila.md" 2>/dev/null | sed 's/(tj\. `42`)//' | grep -q 42; then
+        echo 0
+    elif ! git cat-file -e "${1}zelena.txt" 2>/dev/null; then
+        echo 1
+    elif ! git cat-file -e "${1}rumena.txt" 2>/dev/null || git show "${1}rumena.txt" | grep -q TODO; then
+        echo 2
     else
-        printf "\e[0;34mDatoteke zelena.txt še ne najdem.\n\e[0m"
+        echo 3
     fi
+}
 
-else
-    if ! grep -q "inhibit-stiridva" navodila.md; then
-        printf $"\e[0;31mNe najdem odgovora. Preveri, da je število 42 res prisotno v datoteki, ter da je sprememba shranjena v git-u.\n\e[0m"
-    fi
+# Ko so v indeksu že nadaljnja navodila, je zgodba končana.
+if git show :navodila.md 2>/dev/null | grep -q inhibit-stiridva; then
+    exit 0
 fi
+
+if git diff --cached --quiet; then
+    printf "${rdeca}Nobena sprememba ni dodana z ukazom 'add', zato ni kaj zabeležiti.${konec}\n"
+    exit 0
+fi
+
+prej=$(stopnja HEAD:)
+zdaj=$(stopnja :)
+
+case $zdaj in
+0)
+    printf "${rdeca}Ne najdem odgovora. Preveri, da je število 42 res zapisano v datoteki navodila.md in da je datoteka dodana z ukazom 'add'.${konec}\n"
+    ;;
+1)
+    if [ "$prej" -lt 1 ]; then
+        printf "${modra}Odgovor prisoten! Čestitke, zaslužiš si modro barvo.\nZa zeleno moraš ustvariti novo datoteko z imenom 'zelena.txt' (brez narekovajev), povedati Gitu za spremembo z ukazom 'add' in jo zabeležiti z ukazom 'commit'.${konec}\n"
+    else
+        printf "${modra}Datoteke zelena.txt še ni v vnosu. Preveri, da obstaja in da je dodana z ukazom 'add'.${konec}\n"
+    fi
+    ;;
+2)
+    [ -e rumena.txt ] || cp spoilerji/rumena.txt rumena.txt
+    if [ "$prej" -lt 2 ]; then
+        printf "${zelena}Čestitke! Naslednja barva je rumena, zanjo moraš izbrisati vse pojavitve besede TODO iz datoteke rumena.txt, ki se je ravno pojavila.\nNadaljnja navodila dobiš, ko bo pravilna sprememba vnesena v repozitorij.${konec}\n"
+    else
+        printf "${zelena}Rumene še ni: v vnosu mora biti datoteka rumena.txt brez besede TODO. Preveri, da so pobrisane vse pojavitve in da je datoteka dodana z ukazom 'add'.${konec}\n"
+    fi
+    ;;
+3)
+    if grep -q inhibit-stiridva navodila.md; then
+        printf "${rumena}Nadaljnja navodila so na koncu datoteke navodila.md.${konec}\n"
+    else
+        echo >> navodila.md
+        cat spoilerji/navodila-dodatek.md >> navodila.md
+        printf "${rumena}Fantastično! Sedaj imaš vse tri barve. Skrajni čas, da svoje delo pošlješ na GitHub; navodila so se ravno pojavila na koncu datoteke navodila.md.${konec}\n"
+    fi
+    ;;
+esac
+
+exit 0
