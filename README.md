@@ -1,6 +1,6 @@
 # Navodila
 
-Dobrodošli! Ta repozitorij vsebuje interaktivno zgodbo, skozi katero boste spoznali osnove Git-a.
+Dobrodošli! Ta repozitorij vsebuje interaktivno zgodbo, skozi katero boste spoznali osnove Gita.
 
 Za igranje potrebujete uporabniški račun na GitHubu, na svojem računalniku pa nameščen Git.
 
