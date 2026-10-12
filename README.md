@@ -19,14 +19,16 @@ Nato se vrnite na zavihek *Code* in nadaljujte.
 
 ## 3. Klonirajte repozitorij na svoj računalnik
 
-[Odprite ukazno vrstico](TODO) in vanjo napišite (ustrezno popravljen) ukaz:
+Na **svoji** kopiji repozitorija kliknite zeleni gumb _Code_, izberite _Local_ in _SSH_ ter kopirajte naslov (kot v 1. nalogi na vajah). Videti je takole:
 
 ```
-git clone git@github.com:〈uporabnisko-ime〉/〈ime-tega-repozitorija〉.git
+git clone git@github.com:⟨uporabnisko-ime⟩/git-zgodba.git
 ```
+
+V ukazno vrstico v VSCode (v imeniku `rp`) napišite `git clone`, prilepite naslov in stisnite vnašalko.
 
 Sledite navodilom v datoteki `navodila.md`:
-- v ukazni vrstici se premaknite v repozitorij: `cd 〈ime-tega-repozitorija〉` in
+- v ukazni vrstici se premaknite v repozitorij: `cd git-zgodba` in
 - izpišite vsebino datoteke z navodili: `cat navodila.md`.
 
 Datoteka `navodila.md` je napisana v jeziku Markdown, za to je koda označena z obrnjenimi apostrofi: `` ` ``.
