@@ -13,7 +13,7 @@ Za igranje potrebujete uporabniški račun na GitHubu, na svojem računalniku pa
   
 ## 2. Pripravite svoj repozitorij
 
-Github na kopiranih repozitorijih avtomatsko izklopi robotsko pomoč, ki jo uporabimo v zgodbi.
+GitHub na kopiranih repozitorijih avtomatsko izklopi robotsko pomoč, ki jo uporabimo v zgodbi.
 Da jo ponovno vklopite, pojdite na zavihek *Actions* zgoraj in stisnite zelen gumb z napisom *I understand my workflows, go ahead and enable them*.
 Nato se vrnite na zavihek *Code* in nadaljujte.
 
@@ -31,7 +31,7 @@ Sledite navodilom v datoteki `navodila.md`:
 - v ukazni vrstici se premaknite v repozitorij: `cd git-zgodba` in
 - izpišite vsebino datoteke z navodili: `cat navodila.md`.
 
-Datoteka `navodila.md` je napisana v jeziku Markdown, za to je koda označena z obrnjenimi apostrofi: `` ` ``.
+Datoteka `navodila.md` je napisana v jeziku Markdown, zato je koda označena z obrnjenimi apostrofi: `` ` ``.
 To pomeni, da če so v datoteki navodila
 ```shell
 Poženite program `nano` takole: `nano datoteka.txt`
