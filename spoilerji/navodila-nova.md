@@ -11,11 +11,11 @@ inhibit-stiridva
 5. Git-u povejte, da ste spremenili datoteko: `git add navodila.md`.
 6. Poglejte, kaj ko se je spremenil repozitorij: `git status`.
    Zeleno obarvana imena so spremembe, za katere git ve, rdeča pa tiste spremembe,
-   za katere git še ne ve. Sedaj napišite `git commit -m "Moj prvi commit"` in
-   s tem povejte git-u, naj spremembe shrani v repozitorij.
+   za katere git še ne ve. Sedaj napišite `git commit -m "Moj prvi vnos"` in
+   s tem spremembo zabeležite kot vnos v repozitorij.
 7. Glejte ukazno vrstico za nadaljnja navodila.
    Če se ob ukazu `git commit` ni izpisalo nič drugega kot običajno, ste izpustili 2. korak: poženite skripto in `git commit` ponovite.
-8. Shranite svoje delo na github z naslednjimi ukazi:
+8. Pošljite svoje delo na GitHub z naslednjimi ukazi:
    - `git add navodila.md zelena.txt rumena.txt`
    - `git commit -m "Tik pred shranjevanjem na strežnik"`
    - `git push origin master`
