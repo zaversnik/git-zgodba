@@ -1,4 +1,4 @@
 TODO Naprogramiraj nekaj
 TODO Nauči se git
-TODO V ta repozitorij dodaj commit iz 12. 12. 2012
+TODO V ta repozitorij dodaj vnos iz 12. 12. 2012
 TODO Izbriši ta TODO

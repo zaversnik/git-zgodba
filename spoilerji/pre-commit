@@ -1,19 +1,21 @@
 #!/usr/bin/env bash
 
 if grep -q "42" navodila.md; then
-    printf "\e[0;34mOdgovor prisoten! Čestitke, zaslužiš si modro barvo.\nZa zeleno moraš ustvariti novo datoteko z imenom 'zelena.txt' (brez narekovajev), povedati git-u za spremembo z ukazom 'add' in spremembo shraniti z ukazom 'commit'.\n\e[0m"
+    printf "\e[0;34mOdgovor prisoten! Čestitke, zaslužiš si modro barvo.\nZa zeleno moraš ustvariti novo datoteko z imenom 'zelena.txt' (brez narekovajev), povedati Gitu za spremembo z ukazom 'add' in jo zabeležiti z ukazom 'commit'.\n\e[0m"
 
     if ls | grep -q "zelena.txt"; then
-        printf $"\e[0;32mČestitke! Naslednja barva je rumena, zanjo moraš izbrisati vse pojavitve besede TODO iz datoteke rumena.txt, ki se je ravno pojavila.\nNadaljna navodila dobiš, ko bo pravilna sprememba shranjena v repozitoriju.\n\e[0m"
+        printf $"\e[0;32mČestitke! Naslednja barva je rumena, zanjo moraš izbrisati vse pojavitve besede TODO iz datoteke rumena.txt, ki se je ravno pojavila.\nNadaljnja navodila dobiš, ko bo pravilna sprememba vnesena v repozitorij.\n\e[0m"
         if ! ls | grep -q "rumena.txt"; then
             cp spoilerji/rumena.txt rumena.txt
         fi
 
         if ! grep -q "TODO" rumena.txt; then
-           printf $"\e[0;33mFantastično! Sedaj imaš vse tri barve. Skrajni čas, da svoje delo shraniš na github; navodila so se ravno pojavila v datoteki.\n\e[0m"
+           printf $"\e[0;33mFantastično! Sedaj imaš vse tri barve. Skrajni čas, da svoje delo pošlješ na GitHub; navodila so se ravno pojavila v datoteki.\n\e[0m"
             cp navodila.md navodila-old.md
             cp spoilerji/navodila-nova.md navodila.md
         fi
+    else
+        printf "\e[0;34mDatoteke zelena.txt še ne najdem.\n\e[0m"
     fi
 
 else

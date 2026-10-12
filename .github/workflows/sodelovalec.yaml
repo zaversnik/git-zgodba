@@ -29,12 +29,11 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        echo '5. poženi `git pull origin master`, da snameš ta commit! Čestitke za opravljen kurz.' >> navodila.md
+        echo '10. poženi `git pull origin master`, da snameš ta vnos! Čestitke za opravljen kurz.' >> navodila.md
         echo "" >> navodila.md
         echo "" >> navodila.md
         echo "" >> navodila.md
-        echo "% tega ne briši" >> navodila.md
-        echo "magicnabeseda" >> navodila.md
+        echo '<!-- magicnabeseda: tega ne brišite -->' >> navodila.md
         git add navodila.md
         git commit -m "Dopolnitev navodil"
         git push
