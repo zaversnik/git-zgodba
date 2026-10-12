@@ -33,8 +33,7 @@ jobs:
         echo "" >> navodila.md
         echo "" >> navodila.md
         echo "" >> navodila.md
-        echo "% tega ne briši" >> navodila.md
-        echo "magicnabeseda" >> navodila.md
+        echo '<!-- magicnabeseda: tega ne brišite -->' >> navodila.md
         git add navodila.md
         git commit -m "Dopolnitev navodil"
         git push

@@ -1,4 +1,4 @@
-inhibit-stiridva
+<!-- inhibit-stiridva -->
 
 # Nadaljnja navodila
 
